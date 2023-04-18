@@ -8,7 +8,10 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+<link href="css/styles.css" rel="stylesheet" />
+       
 <title> Mid Term Project</title>
 
 </head>
@@ -26,18 +29,18 @@
           <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="#">Home
+                <a class="nav-link active" href="index.html">Home
                   <span class="visually-hidden">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#firstSection">간단한 자기소개</a>
+                <a class="nav-link" href="#intro">간단한 자기소개</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled" href="#" aria-selected="false" tabindex="-1" role="tab">성적</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#course">이수과목</a>
               </li>
             </ul>
             <form class="d-flex">
@@ -51,9 +54,9 @@
     <header class="masthead bg-primary text-white text-center">
       <div class="container d-flex align-items-center flex-column">
           <!-- Masthead Avatar Image-->
-          <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
+          <img class="masthead-avatar mb-5" src="avataaars.svg" alt="..." />
           <!-- Masthead Heading-->
-          <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
+          <h1 class="masthead-heading text-uppercase mb-0">OpenSource SW</h1>
           <!-- Icon Divider-->
           <div class="divider-custom divider-light">
               <div class="divider-custom-line"></div>
@@ -61,61 +64,72 @@
               <div class="divider-custom-line"></div>
           </div>
           <!-- Masthead Subheading-->
-          <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+          <p class="masthead-subheading font-weight-bold mb-0">Dankook University - Computer Engineering</p>
       </div>
   </header>
 
-
-    
-
-
-
-    <h4>컴퓨터공학과 32180879 김원섭 </h4>
-    <a> 이건만 고쳐도 수정이 되는건지 테스트</a><hr>
-    <a> 아 제발 왜 안되는 거지 무엇이 문제인가 </a><hr>
-    <p>아 진짜 어떻게 하는거야 다 까먹어서 기억이나지 않네</p><hr>
-    ㄴㅁㄴ아ㅓ무ㅏㅓ룸어ㅣ나ㅠㅏㄴ러유ㅓ<hr>
-    <a>ijfjsdfasdfasdfa</a><hr>
+  <div class="container" id="intro">
+      <h4>컴퓨터공학과 32180879 김원섭 </h4>
+      <a> 이건만 고쳐도 수정이 되는건지 테스트</a><hr>
+      <a> 아 제발 왜 안되는 거지 무엇이 문제인가 </a><hr>
+      <p>아 진짜 어떻게 하는거야 다 까먹어서 기억이나지 않네</p><hr>
+      ㄴㅁㄴ아ㅓ무ㅏㅓ룸어ㅣ나ㅠㅏㄴ러유ㅓ<hr>
+      <a>ijfjsdfasdfasdfa</a><hr>
+  </div>
 
 
-    <div class="container" id="cardSection">
-      <div class="card mb-3">
-        <h3 class="card-header">Card header</h3>
+
+
+  <div class="container" id="cardSection">
+      card
+  </div>
+      
+<div class="container" id="course">
+  <h2 class="h1"> 이수과목 </h2>
+  <div class="row">
+    <div class="col-sm">
+      <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">컴퓨터프로그래밍</div>
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <h6 class="card-subtitle text-muted">Support card subtitle</h6>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
-          <rect width="100%" height="100%" fill="#868e96"></rect>
-          <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
-        </svg>
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Cras justo odio</li>
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-          <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-        <div class="card-footer text-muted">
-          2 days ago
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">Card title</h4>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+          <h4 class="card-title">C언어</h4>
+          <p class="card-text">기본적인 c언어</p>
         </div>
       </div>
     </div>
+    <div class="col-sm">
+      <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">창의적사고와코딩</div>
+        <div class="card-body">
+          <h4 class="card-title">파이썬</h4>
+          <p class="card-text">기본적인 파이썬의 문법과 개념</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">논리회로</div>
+        <div class="card-body">
+          <h4 class="card-title">논리회로</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">신호및시스템</div>
+        <div class="card-body">
+          <h4 class="card-title">신호 및 시스템</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!--course finish-->
 
+<div class="container" id="video">
+  <iframe width="460" height="215" src="https://www.youtube.com/embed/lgDKc2W3Wtk?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</div>
 
     
 
