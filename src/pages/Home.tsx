@@ -9,6 +9,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       const allPosts = await getAllPosts();
+      console.log('Loaded posts:', allPosts);
       setPosts(allPosts);
     };
     fetchPosts();
@@ -23,9 +24,15 @@ const Home: React.FC = () => {
         </p>
       </section>
       <div className="post-list">
-        {posts.map((post) => (
-          <PostCard key={post.id} post={post} />
-        ))}
+        {posts.length > 0 ? (
+          posts.map((post) => (
+            <PostCard key={post.id} post={post} />
+          ))
+        ) : (
+          <p style={{ textAlign: 'center', padding: '2rem', color: 'var(--text-muted)' }}>
+            No posts found. Please check src/posts/ folder.
+          </p>
+        )}
       </div>
     </div>
   );

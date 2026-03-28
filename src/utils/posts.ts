@@ -1,10 +1,12 @@
 import type { Post } from '../types';
 
 export function parseFrontmatter(content: string) {
+  // 프론트매터가 없는 경우 대비
   const frontmatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/;
   const match = content.match(frontmatterRegex);
 
   if (!match) {
+    // 프론트매터가 없으면 전체 내용을 content로 반환
     return { data: {}, content };
   }
 
@@ -13,9 +15,11 @@ export function parseFrontmatter(content: string) {
   const data: Record<string, any> = {};
 
   yamlBlock.split('\n').forEach((line) => {
-    const [key, ...valueParts] = line.split(':');
-    if (key && valueParts.length > 0) {
-      data[key.trim()] = valueParts.join(':').trim();
+    const separatorIndex = line.indexOf(':');
+    if (separatorIndex !== -1) {
+      const key = line.slice(0, separatorIndex).trim();
+      const value = line.slice(separatorIndex + 1).trim();
+      if (key) data[key] = value;
     }
   });
 
