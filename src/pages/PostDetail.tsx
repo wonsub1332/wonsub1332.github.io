@@ -7,6 +7,7 @@ import type { Post } from '../types';
 import { getPostById } from '../utils/posts';
 import { useTheme } from '../hooks/useTheme';
 import { ArrowLeft } from 'lucide-react';
+import Mermaid from '../components/Mermaid';
 import '../styles/PostContent.css';
 
 const PostDetail: React.FC = () => {
@@ -29,6 +30,7 @@ const PostDetail: React.FC = () => {
   }
 
   const syntaxTheme = theme === 'dark' ? vscDarkPlus : prism;
+  const mermaidTheme = theme === 'dark' ? 'dark' : 'default';
 
   return (
     <article className="post-detail">
@@ -47,6 +49,12 @@ const PostDetail: React.FC = () => {
           components={{
             code({ node, inline, className, children, ...props }: any) {
               const match = /language-(\w+)/.exec(className || '');
+              const language = match ? match[1] : '';
+
+              if (!inline && language === 'mermaid') {
+                return <Mermaid chart={String(children).replace(/\n$/, '')} theme={mermaidTheme} />;
+              }
+
               return !inline && match ? (
                 <SyntaxHighlighter
                   style={syntaxTheme as any}
