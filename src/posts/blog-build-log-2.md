@@ -41,4 +41,23 @@ export async function getAllPosts(): Promise<Post[]> {
 </ReactMarkdown>
 ```
 
+# 4. Mermaid 다이어그램 지원 (문제 해결)
+
+마크다운에서 `graph TD`와 같은 Mermaid 문법을 사용했을 때, 그림이 아닌 단순한 코드 블록으로 출력되는 문제가 있었습니다. 이를 해결하기 위해 `mermaid` 라이브러리를 직접 연동했습니다.
+
+### 해결 방법
+
+1.  **Mermaid 전용 컴포넌트 생성**: `mermaid.initialize`와 `mermaid.render`를 사용하여 SVG를 생성하는 전용 컴포넌트를 만들었습니다.
+2.  **ReactMarkdown 컴포넌트 확장**: 코드 블록의 언어(`className`)가 `language-mermaid`인 경우, 일반 하이라이터 대신 위에서 만든 `Mermaid` 컴포넌트를 반환하도록 설정했습니다.
+3.  **다크 모드 대응**: `useTheme` 훅에서 현재 테마를 가져와 Mermaid 차트의 색상 테마도 실시간으로 전환되도록 처리했습니다.
+
+```tsx
+// PostDetail.tsx 내 일부
+if (!inline && language === 'mermaid') {
+  return <Mermaid chart={String(children)} theme={mermaidTheme} />;
+}
+```
+
+이제 복잡한 아키텍처나 흐름도를 마크다운 내에서 손쉽게 그릴 수 있게 되었습니다! 🚀
+
 이제 글을 작성하면 자동으로 블로그에 목록이 나타나고 상세 페이지까지 연결됩니다.
