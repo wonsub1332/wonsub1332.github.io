@@ -39,7 +39,7 @@ ch 03 정형 데이터 마이닝  `50%`
     - R의 데이터 형은 기본형, 구조형, 복합형으로 나눌 수 있으며, Special Values가 존재
         
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image.png)
+        ![image.png](/assets/ADsP/part3/image.png)
         
         Special Values
         
@@ -48,7 +48,7 @@ ch 03 정형 데이터 마이닝  `50%`
         - NaN : Not Available Number, 계산 불가능
         - INF : Infinite, 무한대 값
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%201.png)
+        ![image.png](/assets/ADsP/part3/image%201.png)
         
 
 ### 049 R의 데이터 형 - 벡터(vector)
@@ -233,7 +233,7 @@ ch 03 정형 데이터 마이닝  `50%`
         `data.frame이름$열이름`
         
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%202.png)
+    ![image.png](/assets/ADsP/part3/image%202.png)
     
     - data.frame의 이름을 Student라고 하면 korean 열을 추출하기 위해서는 Student$korean을 사용함
     - 4개의 vector가 1개의 data.frame을 구성하며, name, gender는 문자형, korean, english는 숫자형인 것을 알 수 있음
@@ -254,21 +254,21 @@ ch 03 정형 데이터 마이닝  `50%`
     - NA’s
         - 결측치의 개수(연속형, 범주형 공통)
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%203.png)
+        ![image.png](/assets/ADsP/part3/image%203.png)
         
     - iris 데이터셋에 summary 함수 적용
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%204.png)
+        ![image.png](/assets/ADsP/part3/image%204.png)
         
 
 ### 052 그래프 종류 `그래프 해석, 구분 ⭐️`
 
-![image.png](3%EA%B3%BC%EB%AA%A9/image%205.png)
+![image.png](/assets/ADsP/part3/image%205.png)
 
 - 그래프의 결과가 통계학적인 유의미를 갖는 것은 아님!
 - 상자 그림 (boxplot) `⭐️⭐️⭐️`
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%206.png)
+    ![image.png](/assets/ADsP/part3/image%206.png)
     
     - Min, Q1, Median, Q3, Max 값과 이상값(Outlier) 확인 가능
     - Min, Max : 일반적인 범위(이상치 범위 안쪽)에서 가장 작은 값과 큰 값 의미
@@ -284,7 +284,7 @@ ch 03 정형 데이터 마이닝  `50%`
     - 상자그림에 평균, 분산, 데이터의 개수 등의 정보는 없음
 - 상자그림(boxplot)의 예 : 사료 첨가물(feed)에 따른 닭의 무게(weight)에 대한 `상자그림 해석`
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%207.png)
+    ![image.png](/assets/ADsP/part3/image%207.png)
     
     - horsebean을 섭취한 닭의 무게가 다른 사료를 섭취한 닭보다 작다
     - casein을 섭취한 닭의 무게가 다른 사료를 섭취한 닭보다 크다
@@ -299,7 +299,7 @@ ch 03 정형 데이터 마이닝  `50%`
 
 - 히스토그램(Histogram)
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%208.png)
+    ![image.png](/assets/ADsP/part3/image%208.png)
     
     - 도수분포표의 각 계급을 가로축에 나타내고, 해당 계급에 속하는 측정값의 도수를 세로축에 표시하여 직사각형 모양으로 그린다
     - 막대의 높이는 빈도를 나타내며, 폭은 의미가 없다
@@ -380,7 +380,7 @@ ch 03 정형 데이터 마이닝  `50%`
 
 1. 통계 관련 기본 용어
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%209.png)
+    ![image.png](/assets/ADsP/part3/image%209.png)
     
     모집단과 표본
     
@@ -525,7 +525,7 @@ ch 03 정형 데이터 마이닝  `50%`
         
     - 집중화 경향 측정 값의 특징
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2010.png)
+        ![image.png](/assets/ADsP/part3/image%2010.png)
         
         - negative-Skewed : 왼쪽 꼬리가 긴 상태, 오른쪽에 데이터가 치우친 상태
         - Positive-Skewed : 오른쪽 꼬리가 긴 상태, 왼쪽에 데이터가 치우친 상태
@@ -578,7 +578,7 @@ ch 03 정형 데이터 마이닝  `50%`
         <aside>
         💡
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2011.png)
+        ![image.png](/assets/ADsP/part3/image%2011.png)
         
         </aside>
         
@@ -607,7 +607,7 @@ ch 03 정형 데이터 마이닝  `50%`
                 - 표본표준편차= $\sqrt{10}$
         - 분산,표준편차 참고
             
-            ![image.png](3%EA%B3%BC%EB%AA%A9/image%2012.png)
+            ![image.png](/assets/ADsP/part3/image%2012.png)
             
     3. 변동 계수(CV , Coefficient of Variation) - 데이터의 퍼짐 정도 측정
         1. 단위가 다른 두 그룹 또는 단위는 같지만 평균차이가 클 때의 산포 비교에 사용함
@@ -759,19 +759,19 @@ ch 03 정형 데이터 마이닝  `50%`
             1. 모든 실수 값 $x$에 대해 $f(x)≥0$
             2. $\int_{-\infin}^{\infin}f(x)dx=1$
             
-            ![image.png](3%EA%B3%BC%EB%AA%A9/image%2013.png)
+            ![image.png](/assets/ADsP/part3/image%2013.png)
             
     3. 누적 분포 함수 (Cumulative Distribution Function, CDF) .$y=f(x)$, $f(x)=\frac{d}{dx}F(x)$
         1. 어떤  확률 분포에 대해 확률변수가 특정값보다 작거나 같은 확률을 계산하기 위한 함수
         
         2. $F(X)=P(-\infin<X\le x)=P(X\le x),F(-\infin)=0,F(+\infin)=1$
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2014.png)
+        ![image.png](/assets/ADsP/part3/image%2014.png)
         
 
 ### 060 이산형 확률분포 `각각 이름, 특징, 기댓값, 분산`
 
-![image.png](3%EA%B3%BC%EB%AA%A9/image%2015.png)
+![image.png](/assets/ADsP/part3/image%2015.png)
 
 - 베르누이 분포 (Bernoulli Distribution)
     - 매 시행마다 오직 두 가지의 가능한 결과만 일어난다고 할때, 이러한 시행을 1회 시행하여 일어난 두 가지 결과에 의한  값이 각각 0과 1로 결정되며, 다음을 만족하는 확률 변수 X가 따르는 확률분포
@@ -807,7 +807,7 @@ ch 03 정형 데이터 마이닝  `50%`
     - 기하분포의 예
         - A 야구선수의 홈런 칠 확률이 5%일 때, 이 선수가 x번째 타석에서 홈런 칠 확률 분포
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2016.png)
+        ![image.png](/assets/ADsP/part3/image%2016.png)
         
         $P(X=5)=(1-p)^4*p =(0.95)^4*0.05=0.040725$
         
@@ -823,7 +823,7 @@ ch 03 정형 데이터 마이닝  `50%`
         - 어느 AS센터에서 1시간당 평균 120건의 전화가 온다. 이때 1분 동안 걸려오는 전화 요청이 4건 이하일 확률은?
         - 어느 가게에 1시간당 평균 8명의 손님이 온다. 이때 1시간 동안 손님이 10명 올 확률은?
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2017.png)
+        ![image.png](/assets/ADsP/part3/image%2017.png)
         
 - 이산균등 분포 (Discrete Uniform Distribution)
     - 정의된 모든 곳에서 확률분포함수 값이 일정한 분포
@@ -832,11 +832,11 @@ ch 03 정형 데이터 마이닝  `50%`
 
 ### 061 연속형 확률분포 `이름 + 특징 + 어디에 사용되는지`
 
-![image.png](3%EA%B3%BC%EB%AA%A9/image%2018.png)
+![image.png](/assets/ADsP/part3/image%2018.png)
 
 - 정규 분포 (Normal Distribution)
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2019.png)
+    ![image.png](/assets/ADsP/part3/image%2019.png)
     
     - 가우스 분포라고도 하며, 수집된 자료의 분포를 근사하는데 자주 사용함
     - 평균과 표준편차($\sigma$)에 대해 모양이 결정되고 $N(\mu , \sigma^2)$로 표기함
@@ -845,19 +845,19 @@ ch 03 정형 데이터 마이닝  `50%`
     - 정규분포의 평균 주위로 표준편차의 1배 범위에 있을 확률 68%, 2배 범위 안 95%, 3배 범위 안 99.7%
     (정규분포의 3시그마 규칙)
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2020.png)
+        ![image.png](/assets/ADsP/part3/image%2020.png)
         
 - 대부분의 측정값을 정규분포로 가정하는 이유 ***“정규분포의 당위성”***
     - 이항분포의 근사
         - 시행횟수 $N$이 커질 때, 이항분포 $B(N,p)$는 평균 $Np$, 분산 $Npq$안 정규 분포와 $N(Np,Npq)$와 같아짐
             
-            ![image.png](3%EA%B3%BC%EB%AA%A9/image%2021.png)
+            ![image.png](/assets/ADsP/part3/image%2021.png)
             
     - 중심극한정리
         - 표본의 크기가 $N$인 확률분포의 표준평균은 $N$이 충분히 크면 근사적으로 정규분포를 따르게 됨
         - 모집단의 분포와 상관없이 표본의 크기가 30이상이 되면 $N$이 커짐에 따라 표본평균의 분포가 정규분포에 근사해 짐
             
-            ![image.png](3%EA%B3%BC%EB%AA%A9/image%2022.png)
+            ![image.png](/assets/ADsP/part3/image%2022.png)
             
             주사위 던지는 확률분포를 구했을 때 n=30만 되어도 정규분포 모양이 된다
             
@@ -866,7 +866,7 @@ ch 03 정형 데이터 마이닝  `50%`
         - MLE(Maximum Likelihood Estimator) : 실제 값일 가능성이 가장 높은 값
         - 오차(error) : $\epsilon = x -\mu$
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2023.png)
+        ![image.png](/assets/ADsP/part3/image%2023.png)
         
 
 ### 062 연속형 확률부
@@ -879,7 +879,7 @@ ch 03 정형 데이터 마이닝  `50%`
         - 표본의 개수가 적을수록 신뢰도가 낮아지기 때문에 예측범위를 넓히기 위해 옆으로 퍼지게 됨
     - 그래프의 x축 좌표를 t값이라 부르며, t분포표를 사용해 구하고 검정에 사용함
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2024.png)
+    ![image.png](/assets/ADsP/part3/image%2024.png)
     
 - 카이제곱 분포 ($\chi^2)$
     - 분산의 특징을 확률분포로 만든 것으로, 카이($\chi$)는 평균 0 ,분산 1인 표준 정규분포를 의미함
@@ -892,7 +892,7 @@ ch 03 정형 데이터 마이닝  `50%`
     - 두 집단의 분산을 나우었을 때 1이면 두 집단의 크기가 같음으로 판단
     - F 검정과 분산분석(ANOVA)에서 사용됨
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2025.png)
+    ![image.png](/assets/ADsP/part3/image%2025.png)
     
 
 <aside>
@@ -919,7 +919,7 @@ ch 03 정형 데이터 마이닝  `50%`
 
 연속형 확률분포의 선택 및 용도
 
-![image.png](3%EA%B3%BC%EB%AA%A9/image%2026.png)
+![image.png](/assets/ADsP/part3/image%2026.png)
 
 - 모집단이 정규분포이고, 모집단의 분산 또는 표준편차를 모르는 경우 또는 표본의 크기가 작은 경우→ t-분포 사용
 - 모집단이 정규분포이고, 모집단의 분산 또는 표준편차를 아는 경우 검정할 모수가 평균일 때
@@ -996,11 +996,11 @@ ch 03 정형 데이터 마이닝  `50%`
         2. 적률법 - 표본의 기댓값을 통해 모수를 추정하는 방법
         3. 최대가능도추정법(최대우도법) - 함수를 미분해서 기울기가 0인 위치에 존재하는 MLE(Maximum Likelihood estimator)를 찾는 방법
             
-            ![image.png](3%EA%B3%BC%EB%AA%A9/image%2027.png)
+            ![image.png](/assets/ADsP/part3/image%2027.png)
             
         4. 최소제곱법 - 함수값과 측정값의 차이인 오차를 제곱한 합이 최소가 되는 함수를 구하는 방법
             
-            ![image.png](3%EA%B3%BC%EB%AA%A9/image%2028.png)
+            ![image.png](/assets/ADsP/part3/image%2028.png)
             
 2. 구간추정 (Interval Estimation)
     1. 점추정의 정확성을 보완하는 방법으로 통계량을 제시하는 것은 같지만 신뢰구간을 만들어서 추정함
@@ -1049,7 +1049,7 @@ ch 03 정형 데이터 마이닝  `50%`
         2. 99% 신뢰수준에 대한 신뢰구간이 95% 신뢰수준에 대한 신뢰구간보다 길다
         3. 표본의 크기가 커지면 신뢰구간의 길이는 줄어든다ㅇ
             
-            ![image.jpeg](3%EA%B3%BC%EB%AA%A9/image.jpeg)
+            ![image.jpeg](/assets/ADsP/part3/image.jpeg)
             
             <aside>
             <img src="https://www.notion.so/icons/link_gray.svg" alt="https://www.notion.so/icons/link_gray.svg" width="40px" />
@@ -1087,7 +1087,7 @@ ch 03 정형 데이터 마이닝  `50%`
     
     - 가설검정의 절차
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2029.png)
+        ![image.png](/assets/ADsP/part3/image%2029.png)
         
         - 검정통계량 > 임계값 → 귀무가설 기각
     - 귀무가설(Null Hypothesis)과 대립 가설(Anti Hypothesis)
@@ -1111,7 +1111,7 @@ ch 03 정형 데이터 마이닝  `50%`
             - 좌측 검정 : 귀무가설을 기각하는 영역이 왼쪽에 있는 검정
             - 우측 검정 : 귀무가설을 기각하는 영역이 오른쪽에 있는 검정
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2030.png)
+        ![image.png](/assets/ADsP/part3/image%2030.png)
         
         확률  분포 그래프
         
@@ -1136,7 +1136,7 @@ ch 03 정형 데이터 마이닝  `50%`
     <aside>
     <img src="https://www.notion.so/icons/link_gray.svg" alt="https://www.notion.so/icons/link_gray.svg" width="40px" />
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2031.png)
+    ![image.png](/assets/ADsP/part3/image%2031.png)
     
     - 두 가지 오류가 모두 작을 수록 바람직함
     - $\alpha$와 $\beta$, ($1-\alpha$), ($1-\beta$) 는 각각 Trade off 관계
@@ -1155,7 +1155,7 @@ ch 03 정형 데이터 마이닝  `50%`
         2. 유의수준 0.05(5%) : 100번 실험에서 제 1종 오류를 범하는 최대 허용 한계가 5번
         3. $유의수준 + 신뢰수준 = 1$ , $유의수준 = 1 - 신뢰수준$, $유의수준 = \sum기각역$
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2032.png)
+    ![image.png](/assets/ADsP/part3/image%2032.png)
     
 
 1. 검정통계량과 유의확률(p-value)
@@ -1187,7 +1187,7 @@ ch 03 정형 데이터 마이닝  `50%`
     
     가설 검정의 귀무가설 기각/채택
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2033.png)
+    ![image.png](/assets/ADsP/part3/image%2033.png)
     
     양측 검정이며, $df=5$, 유의수준 0.05인 경우 임계값은 -2.571, 2.571임
     
@@ -1234,7 +1234,7 @@ ch 03 정형 데이터 마이닝  `50%`
             
 2. 모수적 추론과 비모수적 추론의 선택
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2034.png)
+    ![image.png](/assets/ADsP/part3/image%2034.png)
     
     n: 표본의 크기
     
@@ -1296,7 +1296,7 @@ ch 03 정형 데이터 마이닝  `50%`
         - K개 집단의 평균 차이가 있는지 분산을 사용하여 검증하는 방법
         - “집단 간 분산” / ”집단 내 분산” 기반의 F 분포를 이용해 가설을 검증하며 정규성, 등분산성, 독립성을 가정함
             
-            ![image.png](3%EA%B3%BC%EB%AA%A9/image%2035.png)
+            ![image.png](/assets/ADsP/part3/image%2035.png)
             
         - 독립변수 - 범주형, 종속변수 - 연속형
         - 귀무가설 기각 시 구체적인 차이를 파악하기 위해, 사후 검정(Post Hoc test)이 필요함
@@ -1321,7 +1321,7 @@ ch 03 정형 데이터 마이닝  `50%`
     
     - 단일 표본 t-검정 예1
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2036.png)
+        ![image.png](/assets/ADsP/part3/image%2036.png)
         
         - 귀무가설 : 임금의 평균은 100이다
         - 대입가설 : 임금의 평균은 100과 같지 않다
@@ -1333,15 +1333,15 @@ ch 03 정형 데이터 마이닝  `50%`
         - 점추정 값은 111.7036이다
     - 예 2
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2037.png)
+        ![image.png](/assets/ADsP/part3/image%2037.png)
         
     - 대응 표본 t-검정(Paired t-test)
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2038.png)
+        ![image.png](/assets/ADsP/part3/image%2038.png)
         
     - 독립 표본 t-검정
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2039.png)
+        ![image.png](/assets/ADsP/part3/image%2039.png)
         
 
 ### 070 비모수적 추론(Non-Parametric Inference)
@@ -1363,7 +1363,7 @@ ch 03 정형 데이터 마이닝  `50%`
         2. 서열척도 기준 : Kolmogorov-Smirnov test, Sign Test, Wilcoxon signed rank test, Friedman test, Mann-Whitney U test, Kruskal-Wallis. H test
 2. 비교 대상 집단 수에 따른 모수/비모수적 추론 방법
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2040.png)
+    ![image.png](/assets/ADsP/part3/image%2040.png)
     
     - 카이제곱검정을 모수적 추론에서 사용할 때는 분산에 대한 검정에 사용되며, 비모수적 추론 방법에는 명목 척도 데이터인 경우 적합성, 동질성, 독립성 검정에서 사용한다
     - 다음중 비모수적 추론이 아닌 것은?
@@ -1395,7 +1395,7 @@ ch 03 정형 데이터 마이닝  `50%`
         
     3. 카이제곱 독립성 검정 결과 해석
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2041.png)
+        ![image.png](/assets/ADsP/part3/image%2041.png)
         
 4. 부호 검정
     1. 단일 표본 (One Sample)
@@ -1445,7 +1445,7 @@ ch 03 정형 데이터 마이닝  `50%`
         
         $\beta_1 :$ 기울기, 회귀계수(coefficient)
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2042.png)
+        ![image.png](/assets/ADsP/part3/image%2042.png)
         
 
 ### 072 회귀 모형의 가정
@@ -1483,7 +1483,7 @@ ch 03 정형 데이터 마이닝  `50%`
         1. 등분산성을 확인하는 그래프이다
         2. y축이 표준화 잔차를 나타내며, 기울기 0인 직선이 이상적임(등분산성을 갖음)
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2043.png)
+        ![image.png](/assets/ADsP/part3/image%2043.png)
         
     3. 잔차와 레버리지 (Residuals vs Leverage) : 영향점을 알아볼 수 있는 그래프 
         1. 회귀 분석에는 잔차의 크기가 큰데이터가 이상치가 되는데 이 중에서도 주로 관심을 가지는 것은 레버리지와 잔차의 크기가 모두 큰 데이터이다
@@ -1492,18 +1492,18 @@ ch 03 정형 데이터 마이닝  `50%`
         4. Leverage가 커지거나 Residual의 크기가 커지면 Cook’s distance 값이 커짐
         5. 일반적으로 Cook’s distance의 값이 1이 넘어가는 관측치를 영향점(influence points)로 판별
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2044.png)
+        ![image.png](/assets/ADsP/part3/image%2044.png)
         
     4. 잔차와 적합치 산점도 (Residuals vs fitted ) : 선형성, 등분산성에 대해 알아볼 수 있는 그래프
         1. 선형성 : y값의 기울기가 0인 직선이 이상적
         2. 등분산성 : 점의 위치가 전체 그래프에 고르게 분포하는 것이 이상적
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2045.png)
+        ![image.png](/assets/ADsP/part3/image%2045.png)
         
         - lm(y~x)가 선형성, 잔차가 등분산성을 만족하지 않음
         - U자 모형으로 제곱항을 넣어보거나, 비선형으로 변환해 볼 수 있음
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2046.png)
+        ![image.png](/assets/ADsP/part3/image%2046.png)
         
         - 잔차가 등분산성을 만족하지 않음(이분산성) 선형성 O
         - 분산이 증가하고 있음, 종속변수를 log로 변환하여 사용
@@ -1536,7 +1536,7 @@ ch 03 정형 데이터 마이닝  `50%`
         3. 대립가설 : 데이터는 특정 분포를 따르지 않는다
         4. K-S Test를 수정한 적합도 검정으로 특정 분포의 꼬리에 K-S Test 보다 가중치를 더 두어 수행됨
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2047.png)
+    ![image.png](/assets/ADsP/part3/image%2047.png)
     
     <aside>
     💡
@@ -1561,15 +1561,15 @@ ch 03 정형 데이터 마이닝  `50%`
             
             →이상치가 없는것이 더 좋은 결과를 가져올 수 있음
             
-            ![image.png](3%EA%B3%BC%EB%AA%A9/image%2048.png)
+            ![image.png](/assets/ADsP/part3/image%2048.png)
             
     2. 단순회귀 모형의 예
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2049.png)
+        ![image.png](/assets/ADsP/part3/image%2049.png)
         
     3. 다중회귀 모형의 예
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2050.png)
+        ![image.png](/assets/ADsP/part3/image%2050.png)
         
 
 ### 075 회귀 모형 해석⭐️⭐️⭐️
@@ -1614,15 +1614,15 @@ ch 03 정형 데이터 마이닝  `50%`
         - 결정계수는 0-1 사이의 범위를 갖으며, 결정계수가 커질수록 회귀방정식의 설명력이 높아짐
         - 전체 분산 중 모델에 의해 설명되는 분산의 양
             
-            ![image.png](3%EA%B3%BC%EB%AA%A9/image%2051.png)
+            ![image.png](/assets/ADsP/part3/image%2051.png)
             
     5. 회귀 모형의 해석 예제
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2052.png)
+        ![image.png](/assets/ADsP/part3/image%2052.png)
         
 3. 회귀 모형의 분산 분석 `결정계수 계산`, `MSE 찾기`, `p-value 유의미성 판단`
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2053.png)
+    ![image.png](/assets/ADsP/part3/image%2053.png)
     
 
 ### 076 다중공선성 및 변수 선택법
@@ -1653,15 +1653,15 @@ ch 03 정형 데이터 마이닝  `50%`
         
 3. 유의확률을 사용한 설명 변수 선택
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2054.png)
+    ![image.png](/assets/ADsP/part3/image%2054.png)
     
 4. Step 함수를 사용한 후진제거법
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2055.png)
+    ![image.png](/assets/ADsP/part3/image%2055.png)
     
 5. Step 함수를 사용한 전진선택법
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2056.png)
+    ![image.png](/assets/ADsP/part3/image%2056.png)
     
 
  
@@ -1684,12 +1684,12 @@ ch 03 정형 데이터 마이닝  `50%`
     2. 샘플에 심취한 모델로 새로운 데이터가 주어졌을 때 제대로 예측해내기 어려울 수 있음
     3. 해결 방법으로 독립변수(Feature)의 개수를 줄이거나, 정칙화(Regularization)를 수행하는 방법이 있음
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2057.png)
+        ![image.png](/assets/ADsP/part3/image%2057.png)
         
         - 알고 있는 데이터에 대해서는 오차가 매우 적고, 새로운 입력 값을 사용했을 때 오차가 커질 수 있는 상태를 과대적합
 3. 정칙화(=정규화, 규제, Regularizarion) 개념
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2058.png)
+    ![image.png](/assets/ADsP/part3/image%2058.png)
     
     - 베타값(회귀계수깂)에 제약을 주어 모델에 변화를 주는 방법
     - $\lambda$ 값은 정규화 모형을 조정하는 hyper parameter
@@ -1701,12 +1701,12 @@ ch 03 정형 데이터 마이닝  `50%`
         1. $L1$ norm (=Manhattan norm) : 베거의 모든 성분의 절대값을 더함
         2. $L2$ norm (=Euclidean norm) : 출발점에서 도착점까지의 거리를 직선거리로 측정함
             
-            ![image.png](3%EA%B3%BC%EB%AA%A9/image%2059.png)
+            ![image.png](/assets/ADsP/part3/image%2059.png)
             
 5. 정규화 선형회귀 모델(Regularized Linear Regression)
     1. 라쏘(Lasso) 회귀 (=능형 회귀)
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2060.png)
+        ![image.png](/assets/ADsP/part3/image%2060.png)
         
         > RSS : Regression Sum of Squares,  $\lambda$ : Lasso 규제의 강도,  $\beta_j$ : 회귀계수, $\beta_0$ : 절편
         > 
@@ -1720,7 +1720,7 @@ ch 03 정형 데이터 마이닝  `50%`
         - 모델에서 가장 중요한 특성이 무엇인지 알게 되는 등 모델 해석력이 좋아짐
     2. 릿지(Ridge) 회귀
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2061.png)
+        ![image.png](/assets/ADsP/part3/image%2061.png)
         
         - L2 norm을 패널티로 가진 선형회귀 방법
         - 회귀계수의 제곱값이 클수록 더 큰 패널티를 부여함
@@ -1737,7 +1737,7 @@ ch 03 정형 데이터 마이닝  `50%`
         - L1,L2 norm을 모두 사용하기 때문에 변수 선택 가능, 변수 간 상관관계를 반영한 Regularization이 가능함
 6. 편향과 분산 (Bias and Variance)
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2062.png)
+    ![image.png](/assets/ADsP/part3/image%2062.png)
     
     - 편향, 분산 : 학습 알고리즘이 갖는 두 가지 종류의 오류로 상충관계(Trade Off)임
     - 학습 모형이 유연할수록 모델 복잡도(Model Complexity)가 증가한다는 것을 의미하여, 편향이 낮고, 분산이 높은 상태가 됨
@@ -1817,23 +1817,23 @@ ch 03 정형 데이터 마이닝  `50%`
 
 1. swiss 데이터셋
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2063.png)
+    ![image.png](/assets/ADsP/part3/image%2063.png)
     
 2. Orange 데이터 셋
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2064.png)
+    ![image.png](/assets/ADsP/part3/image%2064.png)
     
 3. College 데이터셋
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2065.png)
+    ![image.png](/assets/ADsP/part3/image%2065.png)
     
 4. Wage 데이터셋
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2066.png)
+    ![image.png](/assets/ADsP/part3/image%2066.png)
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2067.png)
+    ![image.png](/assets/ADsP/part3/image%2067.png)
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2068.png)
+    ![image.png](/assets/ADsP/part3/image%2068.png)
     
 
 ### 080 데이터 스케일링 (Scaling) `식 암기`
@@ -1854,7 +1854,7 @@ ch 03 정형 데이터 마이닝  `50%`
         
         = (50-0)/(100)=0.5
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2069.png)
+        ![image.png](/assets/ADsP/part3/image%2069.png)
         
 2. 표준화(Standardization)
     1. 특성의 값이 표준정규분포를 갖도록 변환하는 것으로 평균을 0 표준편차를 1이 되로록 변환함
@@ -1868,7 +1868,7 @@ ch 03 정형 데이터 마이닝  `50%`
         
         = (90-80)/10=1
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2070.png)
+        ![image.png](/assets/ADsP/part3/image%2070.png)
         
 3. 구간화 (Binning) 연속형 → 범주형
     1. 데이터의 종류가 많은 경우, 구간으로 나누어 묶어 사용함
@@ -1884,7 +1884,7 @@ ch 03 정형 데이터 마이닝  `50%`
         예) Label Encoding, One Hot Encoding, Binary Encoding 등
         
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2071.png)
+    ![image.png](/assets/ADsP/part3/image%2071.png)
     
 5. 변환(Transformation)
     1. 큰값을 작게 만들기 위해 로그(log)변환, 제곱 루트 변환($\sqrt x$)을 사용하며, 오른쪽 꼬리 긴 분포를 정규분포로 만들 수 있음
@@ -1904,7 +1904,7 @@ ch 03 정형 데이터 마이닝  `50%`
     7. R의 `cor.test()` 함수를 사용해 상관계수 검정을 수행하고, 유의성 검정을 판단할 수 있음
     8. 이때 귀무가설 - ‘상관계수가 0이다‘ / 대립가설 - ’상관계수가 0이 아니다’
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2072.png)
+        ![image.png](/assets/ADsP/part3/image%2072.png)
         
 2. 공분산(Covariance)
     1. 공분산 공식
@@ -1979,17 +1979,17 @@ ch 03 정형 데이터 마이닝  `50%`
     
      그래프 해석
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2073.png)
+    ![image.png](/assets/ADsP/part3/image%2073.png)
     
     </aside>
     
 5. 상관 분석의 예
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2074.png)
+    ![image.png](/assets/ADsP/part3/image%2074.png)
     
 6. 상관계수 행렬
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2075.png)
+    ![image.png](/assets/ADsP/part3/image%2075.png)
     
     - 그래프로 표시된 상관계수 행렬
         
@@ -2022,7 +2022,7 @@ ch 03 정형 데이터 마이닝  `50%`
     - 개체들의 거리는 유클리드 거리와 유사도를 이용하여 구함
     - 관측 대상의 상대적 거리의 정확도를 높이기 위해 적합 정도를 스트레스 값(Stress Value)로 나타내며, **$0$** 에 가까울수록 적합도가 좋음
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2076.png)
+    ![image.png](/assets/ADsP/part3/image%2076.png)
     
 
 ### 083 주성분 분석 (PCA) `2,3 문제 나올수도`
@@ -2035,7 +2035,7 @@ ch 03 정형 데이터 마이닝  `50%`
     5. 주성분은 변수들의 선형결합으로 이루어져 있음
     6. 독립변수듫과 주성분과의 거리인 ’정보손실량’을 최소화하거나 분산을 최대화 함
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2077.png)
+    ![image.png](/assets/ADsP/part3/image%2077.png)
     
 2. 주성분분석 할 때 고민해야 하는 것
     1. ⭐️공분산행렬과 상관계수행렬 중 어떤 것을 선택할 것인가?
@@ -2060,13 +2060,13 @@ ch 03 정형 데이터 마이닝  `50%`
     3. 스크리 플롯 (Scree Plot)
         1. 고윳값을 가장 큰 값에서 가장 작은 값 순서로 정렬해 보여줌(1보다 큰 값 사용 또는 Elbow기법)
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2078.png)
+        ![image.png](/assets/ADsP/part3/image%2078.png)
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2079.png)
+        ![image.png](/assets/ADsP/part3/image%2079.png)
         
 5. 주성분 분석 결과 해석
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2080.png)
+    ![image.png](/assets/ADsP/part3/image%2080.png)
     
     - Standard deviation (표준 편차) :
         - 자료의 산포도를 나타내는 수치
@@ -2084,9 +2084,9 @@ ch 03 정형 데이터 마이닝  `50%`
     
 6. 주성분 분석 결과 해석 심화
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2081.png)
+    ![image.png](/assets/ADsP/part3/image%2081.png)
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2082.png)
+    ![image.png](/assets/ADsP/part3/image%2082.png)
     
 
 ### 084 시계열 자료
@@ -2118,7 +2118,7 @@ ch 03 정형 데이터 마이닝  `50%`
         $$
         
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2083.png)
+    ![image.png](/assets/ADsP/part3/image%2083.png)
     
 
 1. 정상시계열 전환
@@ -2144,7 +2144,7 @@ ch 03 정형 데이터 마이닝  `50%`
         $$
         
     
-    ![image.png](3%EA%B3%BC%EB%AA%A9/image%2084.png)
+    ![image.png](/assets/ADsP/part3/image%2084.png)
     
 
 ### 085 시계열 모형, 분해 시계열
@@ -2255,7 +2255,7 @@ ch 03 정형 데이터 마이닝  `50%`
         - 시차가 다른 두 시계열 데이터 간의 상관관계를 의미한다
     3. AR, MA 모델의 ACF, PACF 그래프
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2085.png)
+        ![image.png](/assets/ADsP/part3/image%2085.png)
         
 3. 분해 시계열 ⭐️
     1. 분해 시계열 : 시계열에 영향을 주는 일반적인 요인을 시계열에서 분리해 분석하는 방법
@@ -2275,7 +2275,7 @@ ch 03 정형 데이터 마이닝  `50%`
         <aside>
         💡
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2086.png)
+        ![image.png](/assets/ADsP/part3/image%2086.png)
         
         - 연도가 증가함에 따라 Y값(매출) 커지는 것을 봤을 때 당뇨병 약의 매출이 증가하는 추세가 보이고 있음
         - 매 연처마다 의약춤 매출이 급감하고, 이후 증가하는 패턴이 매년 반복되는 계절 요인을 보이고 있음
@@ -2284,7 +2284,7 @@ ch 03 정형 데이터 마이닝  `50%`
 4. 시계열 분해 그래프
     1. 시계열 분해 그래프 : 시계열 분해 그래프로 “관측치, 추세, 계절성, 잔차”를 확인할 수 있음
         
-        ![image.png](3%EA%B3%BC%EB%AA%A9/image%2087.png)
+        ![image.png](/assets/ADsP/part3/image%2087.png)
         
         - 추세 :
             - 데이터의 장기적인 경향이나 움직임을 나타냄
