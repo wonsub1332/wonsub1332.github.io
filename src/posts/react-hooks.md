@@ -2,6 +2,7 @@
 title: 리액트 훅(React Hooks) 완벽 이해하기
 date: 2024-03-30
 category: React
+tags: 리액트, 훅, 프론트엔드
 excerpt: 가장 자주 사용되는 useState와 useEffect 훅의 개념과 활용법을 자세히 알아봅니다.
 ---
 
