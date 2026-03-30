@@ -6,6 +6,7 @@ import PostCard from '../components/PostCard';
 const Home: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [isTagsExpanded, setIsTagsExpanded] = useState(false);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -15,7 +16,13 @@ const Home: React.FC = () => {
     fetchPosts();
   }, []);
 
-  const allTags = Array.from(new Set(posts.flatMap((post) => post.tags || [])));
+  // 태그 빈도수 계산 및 정렬
+  const tagCounts = posts.flatMap((post) => post.tags || []).reduce((acc, tag) => {
+    acc[tag] = (acc[tag] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
+
+  const sortedTags = Object.keys(tagCounts).sort((a, b) => tagCounts[b] - tagCounts[a]);
 
   const filteredPosts = selectedTag
     ? posts.filter((post) => post.tags?.includes(selectedTag))
@@ -30,38 +37,67 @@ const Home: React.FC = () => {
         </p>
       </section>
 
-      <div className="tags-container" style={{ marginBottom: '3rem', display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
-        <button
-          onClick={() => setSelectedTag(null)}
-          style={{
-            padding: '0.5rem 1rem',
-            borderRadius: '2rem',
-            fontSize: '0.875rem',
-            backgroundColor: selectedTag === null ? 'var(--primary)' : 'var(--card-bg)',
-            color: selectedTag === null ? '#fff' : 'var(--text-color)',
-            border: '1px solid var(--card-border)',
-            fontWeight: 600
+      <div className="tags-wrapper" style={{ marginBottom: '3rem' }}>
+        <div 
+          className="tags-container" 
+          style={{ 
+            display: 'flex', 
+            flexWrap: 'wrap', 
+            gap: '0.75rem',
+            height: isTagsExpanded ? 'auto' : '45px',
+            overflow: 'hidden',
+            transition: 'height 0.3s ease'
           }}
         >
-          All
-        </button>
-        {allTags.map((tag) => (
           <button
-            key={tag}
-            onClick={() => setSelectedTag(tag)}
+            onClick={() => setSelectedTag(null)}
             style={{
               padding: '0.5rem 1rem',
               borderRadius: '2rem',
               fontSize: '0.875rem',
-              backgroundColor: selectedTag === tag ? 'var(--primary)' : 'var(--card-bg)',
-              color: selectedTag === tag ? '#fff' : 'var(--text-color)',
+              backgroundColor: selectedTag === null ? 'var(--primary)' : 'var(--card-bg)',
+              color: selectedTag === null ? '#fff' : 'var(--text-color)',
               border: '1px solid var(--card-border)',
-              fontWeight: 600
+              fontWeight: 600,
+              height: '36px'
             }}
           >
-            #{tag}
+            All
           </button>
-        ))}
+          {sortedTags.map((tag) => (
+            <button
+              key={tag}
+              onClick={() => setSelectedTag(tag)}
+              style={{
+                padding: '0.5rem 1rem',
+                borderRadius: '2rem',
+                fontSize: '0.875rem',
+                backgroundColor: selectedTag === tag ? 'var(--primary)' : 'var(--card-bg)',
+                color: selectedTag === tag ? '#fff' : 'var(--text-color)',
+                border: '1px solid var(--card-border)',
+                fontWeight: 600,
+                height: '36px'
+              }}
+            >
+              #{tag} ({tagCounts[tag]})
+            </button>
+          ))}
+        </div>
+        {sortedTags.length > 5 && (
+          <button 
+            onClick={() => setIsTagsExpanded(!isTagsExpanded)}
+            style={{ 
+              marginTop: '0.75rem', 
+              fontSize: '0.875rem', 
+              color: 'var(--primary)', 
+              fontWeight: 600,
+              display: 'flex',
+              alignItems: 'center'
+            }}
+          >
+            {isTagsExpanded ? '접기' : '모든 태그 보기...'}
+          </button>
+        )}
       </div>
 
       <div className="post-list">
