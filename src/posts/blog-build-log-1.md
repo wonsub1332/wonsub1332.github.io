@@ -18,7 +18,25 @@ cd my-blog
 npm install
 ```
 
-# 2. 폴더 구조 설계
+# 2. 시스템 아키텍처
+
+블로그의 전체적인 작동 흐름은 다음과 같습니다.
+
+```mermaid
+graph TD
+    User((사용자)) --> GitHubPages[GitHub Pages 호스팅]
+    subgraph Browser [사용자 브라우저]
+        GitHubPages --> ReactApp[React App / Vite]
+        ReactApp --> Router[HashRouter]
+        Router --> PostLoader[Markdown Loader / Glob]
+        PostLoader --> MarkdownFiles[(src/posts/*.md)]
+        PostLoader --> Parser[Frontmatter Parser]
+        Parser --> UI[Post List / Detail UI]
+    end
+    UI --> Theme[Light/Dark Mode Theme]
+```
+
+# 3. 폴더 구조 설계
 
 확장성을 고려하여 다음과 같은 구조로 시작했습니다.
 
