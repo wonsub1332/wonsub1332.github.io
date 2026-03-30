@@ -1,20 +1,22 @@
 ---
-title: Hello World
+title: 첫 번째 블로그 포스트에 오신 것을 환영합니다
 date: 2024-03-29
-category: React
-excerpt: My first blog post using React and Markdown.
+category: 시작하기
+excerpt: 리액트와 마크다운으로 구축한 저의 첫 번째 기술 블로그 포스트입니다.
 ---
 
-# Hello World
+# 안녕하세요! 첫 포스트입니다.
 
-Welcome to my new tech blog! This is my first post.
+저의 새로운 기술 블로그에 방문해 주셔서 감사합니다! 이 블로그는 리액트(React)를 사용하여 직접 구축했습니다.
 
-## Why I built this blog
-I wanted a simple, fast, and developer-friendly way to share my thoughts and learnings.
+## 블로그 구축 동기
+개발자로서 배운 지식과 경험을 기록하고 공유하기 위해 이 공간을 만들었습니다. 단순하고 빠른 성능을 위해 마크다운 파일을 기반으로 포스트를 관리하도록 설계했습니다.
 
 ```javascript
-const message = "Hello, World!";
-console.log(message);
+const greeting = "반갑습니다, 여러분!";
+console.log(greeting);
 ```
 
-Stay tuned for more!
+앞으로 유익한 개발 정보와 튜토리얼을 꾸준히 공유할 예정이니 자주 들러주세요!
+
+다음에 또 만나요!
