@@ -1,3 +1,11 @@
+---
+title: Raspberry Pi 기반 Minecraft 서버 운영 및 모니터링 구축 프로젝트
+date: 2024-03-31
+category: Project
+tags: DevOps, 프로젝트, 모니터링, 마인크래프트, 라즈베리파이
+excerpt: 단순한 게임 서버 구축을 넘어 Prometheus와 Grafana를 활용한 모니터링 시스템 구축 및 트러블슈팅 경험을 담은 DevOps 포트폴리오입니다.
+---
+
 # Raspberry Pi 기반 Minecraft 서버 운영 및 모니터링 구축 프로젝트
 
 ## (DevOps / SRE 포트폴리오 프로젝트)
