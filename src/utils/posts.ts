@@ -48,7 +48,17 @@ export async function getAllPosts(): Promise<Post[]> {
     } as Post;
   });
 
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return posts.sort((a, b) => {
+    const dateA = new Date(a.date).getTime();
+    const dateB = new Date(b.date).getTime();
+    
+    // 유효하지 않은 날짜의 경우 뒤로 보냄
+    if (isNaN(dateA)) return 1;
+    if (isNaN(dateB)) return -1;
+    
+    // 내림차순 정렬 (최신글이 앞)
+    return dateB - dateA;
+  });
 }
 
 export async function getPostById(id: string): Promise<Post | undefined> {
