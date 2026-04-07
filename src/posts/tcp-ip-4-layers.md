@@ -1,6 +1,6 @@
 ---
 title: TCP/IP 4계층 모델과 소켓 프로그래밍 실습 (C언어)
-date: 2024-04-07
+date: 2026-04-07
 category: Network
 tags: 네트워크, TCP/IP, C언어, 소켓프로그래밍
 excerpt: 네트워크의 핵심인 TCP/IP 4계층 모델을 알아보고, C언어를 이용해 TCP와 UDP 통신을 직접 구현해 봅니다.
