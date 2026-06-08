@@ -12,7 +12,7 @@ export function parseFrontmatter(content: string) {
 
   const yamlBlock = match[1];
   const markdownContent = match[2];
-  const data: Record<string, any> = {};
+  const data: Record<string, string> = {};
 
   yamlBlock.split('\n').forEach((line) => {
     const separatorIndex = line.indexOf(':');

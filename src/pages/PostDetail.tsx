@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, type ComponentProps } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown, { type Components } from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus, prism } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -10,6 +10,11 @@ import { useTheme } from '../hooks/useTheme';
 import { ArrowLeft } from 'lucide-react';
 import Mermaid from '../components/Mermaid';
 import '../styles/PostContent.css';
+
+type MarkdownCodeProps = ComponentProps<'code'> & {
+  inline?: boolean;
+  node?: unknown;
+};
 
 const PostDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -30,8 +35,33 @@ const PostDetail: React.FC = () => {
     return <div className="container">Post not found</div>;
   }
 
-  const syntaxTheme = theme === 'dark' ? vscDarkPlus : prism;
+  const syntaxTheme = (theme === 'dark' ? vscDarkPlus : prism) as {
+    [key: string]: React.CSSProperties;
+  };
   const mermaidTheme = theme === 'dark' ? 'dark' : 'default';
+  const markdownComponents: Components = {
+    code({ inline, className, children }: MarkdownCodeProps) {
+      const match = /language-(\w+)/.exec(className || '');
+
+      if (!inline && match?.[1] === 'mermaid') {
+        return <Mermaid chart={String(children).replace(/\n$/, '')} theme={mermaidTheme} />;
+      }
+
+      if (!inline && match?.[1]) {
+        return (
+          <SyntaxHighlighter style={syntaxTheme} language={match[1]} PreTag="div">
+            {String(children).replace(/\n$/, '')}
+          </SyntaxHighlighter>
+        );
+      }
+
+      return (
+        <code className={className}>
+          {children}
+        </code>
+      );
+    },
+  };
 
   return (
     <article className="post-detail">
@@ -46,34 +76,7 @@ const PostDetail: React.FC = () => {
         </div>
       </header>
       <div className="post-content">
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
-          components={{
-            code({ node, inline, className, children, ...props }: any) {
-              const match = /language-(\w+)/.exec(className || '');
-              const language = match ? match[1] : '';
-
-              if (!inline && language === 'mermaid') {
-                return <Mermaid chart={String(children).replace(/\n$/, '')} theme={mermaidTheme} />;
-              }
-
-              return !inline && match ? (
-                <SyntaxHighlighter
-                  style={syntaxTheme as any}
-                  language={match[1]}
-                  PreTag="div"
-                  {...props}
-                >
-                  {String(children).replace(/\n$/, '')}
-                </SyntaxHighlighter>
-              ) : (
-                <code className={className} {...props}>
-                  {children}
-                </code>
-              );
-            },
-          }}
-        >
+        <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
           {post.content}
         </ReactMarkdown>
       </div>
